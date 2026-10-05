@@ -54,10 +54,11 @@ Audit branch: `audit/ethereum-production-2026-10-05`. Use the **full 40-characte
 - Initial audit snapshot commit: `deb457c11dd1704c9aa62ee2ba071553ca3c80d9`; retained unchanged in Git history. This documentation update has a separate commit; use its full SHA from the audit branch for the updated scope.
 - Ethereum chain ID, recorded block/hash and exact deployed bytecode comparison confirmed (see `evidence/rpc-block-check.json`).
 - Private reporting address confirmed by the project owner: `contact@xdol.com.br`.
+- Classic GitHub branch protection created for `audit/ethereum-production-2026-10-05` on 2026-10-05. Force pushes and deletions are disallowed; administrator bypass is disabled. Normal fast-forward updates remain possible; always scope an audit to a full commit SHA.
 
 ### Required validation before submission
 
 - `[PENDING: recover original verification Standard JSON / metadata settings and reproduce complete bytecode, or obtain Hacken's explicit acceptance of executable-only reproduction]`.
-- `[PENDING: protect audit branch against force-push/deletion where GitHub plan permits]`.
+
 
 No audit has been performed by this preparation. Findings and remediation belong in later commits/branches and require a separately agreed audit scope.

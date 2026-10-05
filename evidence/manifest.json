@@ -15,10 +15,18 @@
   "sourceSha256": "900729202032605d5274da37e26534172e96e3d7c2e39cc671f765a45ccfe1a8",
   "bytecodeEvidence": "Independent Ethereum Mainnet eth_getCode at recorded block 26128088 exactly matches Etherscan runtime bytecode; see rpc-block-check.json",
   "pending": [
-    "Full recompilation CBOR metadata match / original compiler input recovery",
-    "Audit branch protection"
+    "Full recompilation CBOR metadata match / original compiler input recovery"
   ],
   "repository": "https://github.com/xdolofficial/xdol-ethereum-audit",
   "initialAuditCommit": "deb457c11dd1704c9aa62ee2ba071553ca3c80d9",
-  "securityContact": "contact@xdol.com.br"
+  "securityContact": "contact@xdol.com.br",
+  "branchProtection": {
+    "branch": "audit/ethereum-production-2026-10-05",
+    "createdOn": "2026-10-05",
+    "allowForcePushes": false,
+    "allowDeletions": false,
+    "enforceAdmins": true,
+    "verification": "GitHub settings showed Branch protection rule created after owner authentication"
+  },
+  "metadataCid": "QmUv56PJgq5gSG8iEBXoDDUFeLHEa866PSq7bn9q46uQTR"
 }
