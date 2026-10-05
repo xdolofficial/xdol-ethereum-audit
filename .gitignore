@@ -1,0 +1,6 @@
+build/
+node_modules/
+soljson*.js
+soljson*.cjs
+.env
+.env.*

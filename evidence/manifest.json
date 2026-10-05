@@ -1,0 +1,23 @@
+{
+  "network": "Ethereum Mainnet",
+  "chainId": 1,
+  "address": "0xA4842662637e7C8A0210247D89244B0E45d3f777",
+  "contract": "XDOLToken",
+  "compiler": "0.8.30+commit.73712a01",
+  "optimizer": {
+    "enabled": true,
+    "runs": 200
+  },
+  "evmVersion": "default (compiler default)",
+  "license": "MIT",
+  "sourceUrl": "https://etherscan.io/address/0xA4842662637e7C8A0210247D89244B0E45d3f777#code",
+  "capturedAt": "2026-10-05T18:36:56.341Z",
+  "sourceSha256": "900729202032605d5274da37e26534172e96e3d7c2e39cc671f765a45ccfe1a8",
+  "bytecodeEvidence": "Etherscan displayed creation and deployed bytecode; independent RPC pending",
+  "pending": [
+    "GitHub repository URL and remote commit",
+    "Independent eth_getCode comparison at recorded block",
+    "Private security contact",
+    "Branch protection"
+  ]
+}

@@ -1,0 +1,4 @@
+contracts/*.sol -text
+evidence/*.json -text
+*.md text eol=lf
+scripts/*.cjs text eol=lf
