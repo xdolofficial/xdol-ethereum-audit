@@ -22,7 +22,7 @@ This repository preserves the verified production source without changes to cont
 
 `contracts/XDOLToken.sol` is the entire flattened source extracted from Etherscan, including its embedded OpenZeppelin dependencies. Do not replace those dependencies with a current package version or add an SPDX header to the audit source.
 
-`evidence/etherscan-source.json` retains the decoded source payload. `manifest.json` records provenance and SHA-256. Creation and runtime bytecode displayed by Etherscan are saved alongside the ABI. An independent `eth_getCode` request to https://ethereum-rpc.publicnode.com returned runtime bytecode exactly matching Etherscan on 2026-10-05. That initial request used `latest`; a recorded-block read is still required for a durable state snapshot.
+`evidence/etherscan-source.json` retains the decoded source payload. `manifest.json` records provenance and SHA-256. Creation and runtime bytecode displayed by Etherscan are saved alongside the ABI. An independent `eth_getCode` request to https://ethereum-rpc.publicnode.com returned runtime bytecode exactly matching Etherscan on 2026-10-05. A subsequent recorded-block check confirmed chain ID 1 and identical runtime bytecode at Ethereum block **26,128,088**, hash `0x9c8e4190d2380406b3e60d25cfb48ead739c5fe6248a4bd7663e831cbe901aa3`. Endpoint, capture time, block and comparison are recorded in `evidence/rpc-block-check.json`.
 
 Compilation with the exact compiler and optimizer reproduces the executable creation and runtime bytecode. **Full bytecode differs in the trailing Solidity CBOR metadata.** Original compiler input path/content representation and metadata settings have not been recovered conclusively. `evidence/build-check.json` records this explicitly. Source correspondence is confirmed against the explorer payload; full-bytecode reproducibility is NOT claimed. Do not redeploy this repository.
 
@@ -48,12 +48,16 @@ Observed source behavior: ERC-20 named `x-DOL-x`, symbol `XDOL`, six decimals, i
 
 Audit branch: `audit/ethereum-production-2026-10-05`. Use the **full 40-character commit SHA**, not branch HEAD, as the immutable audit reference. A branch can move; its name is not an immutable reference. Obtain the commit with `git rev-parse HEAD` after checking out the branch. Published coordinates are recorded in the separate handoff file, outside the commit to avoid a self-referential SHA.
 
+### Completed preparation checks
+
+- Public repository: https://github.com/xdolofficial/xdol-ethereum-audit.
+- Initial audit snapshot commit: `deb457c11dd1704c9aa62ee2ba071553ca3c80d9`; retained unchanged in Git history. This documentation update has a separate commit; use its full SHA from the audit branch for the updated scope.
+- Ethereum chain ID, recorded block/hash and exact deployed bytecode comparison confirmed (see `evidence/rpc-block-check.json`).
+- Private reporting address confirmed by the project owner: `contact@xdol.com.br`.
+
 ### Required validation before submission
 
 - `[PENDING: recover original verification Standard JSON / metadata settings and reproduce complete bytecode, or obtain Hacken's explicit acceptance of executable-only reproduction]`.
-- `[PENDING: record independent Ethereum RPC chain ID and block number/hash for the bytecode snapshot]`.
-- `[PENDING: confirm private security reporting channel and authorized project contact]`.
-- `[PENDING: confirm remote repository URL, full commit SHA and auditor access]`.
 - `[PENDING: protect audit branch against force-push/deletion where GitHub plan permits]`.
 
 No audit has been performed by this preparation. Findings and remediation belong in later commits/branches and require a separately agreed audit scope.

@@ -13,11 +13,12 @@
   "sourceUrl": "https://etherscan.io/address/0xA4842662637e7C8A0210247D89244B0E45d3f777#code",
   "capturedAt": "2026-10-05T18:36:56.341Z",
   "sourceSha256": "900729202032605d5274da37e26534172e96e3d7c2e39cc671f765a45ccfe1a8",
-  "bytecodeEvidence": "Etherscan displayed creation and deployed bytecode; independent RPC pending",
+  "bytecodeEvidence": "Independent Ethereum Mainnet eth_getCode at recorded block 26128088 exactly matches Etherscan runtime bytecode; see rpc-block-check.json",
   "pending": [
-    "GitHub repository URL and remote commit",
-    "Independent eth_getCode comparison at recorded block",
-    "Private security contact",
-    "Branch protection"
-  ]
+    "Full recompilation CBOR metadata match / original compiler input recovery",
+    "Audit branch protection"
+  ],
+  "repository": "https://github.com/xdolofficial/xdol-ethereum-audit",
+  "initialAuditCommit": "deb457c11dd1704c9aa62ee2ba071553ca3c80d9",
+  "securityContact": "contact@xdol.com.br"
 }
